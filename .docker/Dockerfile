@@ -18,7 +18,9 @@ RUN pip install --upgrade pip
 RUN pip3 install \
     notebook \
     matplotlib \
-    -U scikit-learn
+    pandas \
+    -U scikit-learn \
+
 
 RUN apt-get install -y python3-pyqt5
 
