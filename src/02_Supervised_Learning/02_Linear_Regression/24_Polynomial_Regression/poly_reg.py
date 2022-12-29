@@ -8,9 +8,14 @@ import matplotlib.pyplot as plt
 
 # Change working dir
 import os
-abspath = os.path.abspath(__file__)
-dname = os.path.dirname(abspath)
-os.chdir(dname)
+
+rootdir = os.path.dirname(os.path.abspath(os.path.basename(__file__)))
+print(rootdir)
+sys.path.append(rootdir)
+
+from src.utils import change_wd_to_current_file
+
+change_wd_to_current_file()
 
 # Assign the data to predictor and outcome variables
 # TODO: Load the data

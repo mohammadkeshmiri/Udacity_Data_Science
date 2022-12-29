@@ -2,8 +2,15 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
 import pandas as pd
+import os, sys
 
+rootdir = os.path.dirname(os.path.abspath(os.path.basename(__file__)))
+print(rootdir)
+sys.path.append(rootdir)
 
+from src.utils import change_wd_to_current_file
+
+change_wd_to_current_file()
 
 # Assign the dataframe to this variable.
 # TODO: Load the data

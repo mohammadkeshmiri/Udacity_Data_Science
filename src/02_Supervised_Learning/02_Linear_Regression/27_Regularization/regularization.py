@@ -4,19 +4,16 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 from sklearn.linear_model import Lasso
-import path
 import sys
 import os
 
-# directory reach
-current = os.path.dirname(os.path.realpath(__file__))
-parent = os.path.dirname(current)
-sys.path.append(parent)
- 
-# importing
-import utils
+rootdir = os.path.dirname(os.path.abspath(os.path.basename(__file__)))
+print(rootdir)
+sys.path.append(rootdir)
 
-utils.change_wd_to_current_file()
+from src.utils import change_wd_to_current_file
+
+change_wd_to_current_file()
 
 # Assign the data to predictor and outcome variables
 # TODO: Load the data
